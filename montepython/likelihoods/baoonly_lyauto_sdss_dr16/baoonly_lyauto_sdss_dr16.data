@@ -1,5 +1,4 @@
-# BAO-only DR16 (Alam et al. arXiv: 2007.08991)
-# for the Lya-auto sample
+# BAO-only DR16 for the Lya-auto sample (arXiv: 2007.08995)
 # By Shahbaz Alvi January 2022
 
 baoonly_lyauto_sdss_dr16.data_directory      = data.path['data']

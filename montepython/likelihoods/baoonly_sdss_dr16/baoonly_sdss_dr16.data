@@ -1,4 +1,4 @@
-# BAO-only DR16 (Alam et al. arXiv: 2007.08991)
+# BAO-only DR16 
 # Includes LRG samples from SDSS DR12 (do not use
 # the bao_boss_dr12 likelihood with this likelihood)
 # and QSO data. The likelihood and the data are
@@ -9,17 +9,17 @@
 # The directory where the following files are stored
 baoonly_sdss_dr16.data_directory      = data.path['data']
 
-# Options for DR12 LRG datasets (z_eff = 0.38, 0.51)
+# Options for DR12 LRG datasets (z_eff = 0.38, 0.51)(arXiv: 1607.03155)
 baoonly_sdss_dr16.lrg_dr12 = True
 baoonly_sdss_dr16.lrg_dr12_data_file = 'sdss_dr16/sdss_DR12_LRG_BAO_DMDH.txt'
 baoonly_sdss_dr16.lrg_dr12_cov_file  = 'sdss_dr16/sdss_DR12_LRG_BAO_DMDH_covtot.txt'
 
-# Options for DR16 LRG datasets (z_eff = 0.70)
+# Options for DR16 LRG datasets (z_eff = 0.70) (arXiv: 2007.08993, arXiv: 2007.08994)
 baoonly_sdss_dr16.lrg_dr16 = True
 baoonly_sdss_dr16.lrg_dr16_data_file  = 'sdss_dr16/sdss_DR16_LRG_BAO_DMDH.txt'
 baoonly_sdss_dr16.lrg_dr16_cov_file  = 'sdss_dr16/sdss_DR16_LRG_BAO_DMDH_covtot.txt'
 
-# Options for DR16 QSO datasets (z_eff = 1.48)
+# Options for DR16 QSO datasets (z_eff = 1.48)(arxiv: 2007.08998, arXiv: 2007.08999)
 baoonly_sdss_dr16.qso_dr16 = True
 baoonly_sdss_dr16.qso_data_file = 'sdss_dr16/sdss_DR16_QSO_BAO_DMDH.txt'
 baoonly_sdss_dr16.qso_cov_file = 'sdss_dr16/sdss_DR16_QSO_BAO_DMDH_covtot.txt'

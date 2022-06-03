@@ -9,7 +9,7 @@
 # The directory where the following files are stored
 baoonly_sdss_dr16.data_directory      = data.path['data']
 
-# Options for DR12 LRG datasets (z_eff = 0.38, 0.51)(arXiv: 1607.03155)
+# Options for DR12 LRG datasets (z_eff = 0.38, 0.51)(Ref: arXiv: 1607.03155)
 baoonly_sdss_dr16.lrg_dr12 = True
 baoonly_sdss_dr16.lrg_dr12_data_file = 'sdss_dr16/sdss_DR12_LRG_BAO_DMDH.txt'
 baoonly_sdss_dr16.lrg_dr12_cov_file  = 'sdss_dr16/sdss_DR12_LRG_BAO_DMDH_covtot.txt'

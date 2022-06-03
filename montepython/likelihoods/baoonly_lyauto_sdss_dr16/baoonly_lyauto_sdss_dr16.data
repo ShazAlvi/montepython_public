@@ -1,0 +1,10 @@
+# BAO-only DR16 for the Lya-auto sample (arXiv: 2007.08995)
+# By Shahbaz Alvi January 2022
+
+baoonly_lyauto_sdss_dr16.data_directory      = data.path['data']
+
+baoonly_lyauto_sdss_dr16.data_file = 'sdss_dr16/sdss_DR16_LYAUTO_BAO_DMDHgrid.txt'
+baoonly_lyauto_sdss_dr16.lya_dr16_z_eff = 2.334
+
+baoonly_lyauto_sdss_dr16.rs_rescale          = 1.
+baoonly_lyauto_sdss_dr16.rd_fid_in_Mpc       = 147.78

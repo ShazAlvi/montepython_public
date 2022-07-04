@@ -21,7 +21,6 @@ class baoonly_sdss_dr16(Likelihood):
             raise io_mp.LikelihoodError(
                 'BAO measurments from DR12 have already been included in DR16. Hence, bao_boss_dr12 is in coflict.')
         
-        print("Including the BAO measurements BOSS and eBOSS galaxies, and eBOSS QSO dataset")
         # define arrays for values of z and data points DM/r_s and DH/r_s.
         self.z = np.array([], 'float64')
         self.DM_over_rs = np.array([], 'float64')
@@ -124,7 +123,6 @@ class baoonly_sdss_dr16(Likelihood):
             if np.all(self.cov_data == 0):
                 self.cov_data = np.loadtxt(os.path.join(self.data_directory, self.qso_cov_file))
             else:
-                print("Hi, I am here!")
                 cov_data_Temp = self.cov_data
                 self.cov_data = np.zeros((np.shape(cov_data_Temp)[0] + 
                                           (qso_dr16_points + 1), np.shape(cov_data_Temp)[0]

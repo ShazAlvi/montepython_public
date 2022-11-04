@@ -7,7 +7,7 @@ import scipy.constants as conts
 from scipy import interpolate as itp
 from scipy.interpolate import RectBivariateSpline
 
-class baoonly_sdss_dr16(Likelihood):
+class sdssdr16_gal_qso(Likelihood):
 
     # initialization routine
 
@@ -72,11 +72,11 @@ class baoonly_sdss_dr16(Likelihood):
             lrg_dr16_points = i 
         if self.qso_dr16:
             print("eBOSS QSO = " + str(self.qso_dr16))
-            if  ('baoonly_lyauto_sdss_dr16') in data.experiments:
-                if  not 'baoonly_lyaxqso_sdss_dr16' in data.experiments:
-                    print("If you include QSO dataset in the 'baoonly_sdss_dr16' AND ly-alpha autocorrelation," + 
+            if  ('sdssdr16_lyauto') in data.experiments:
+                if  not 'sdssdr16_lyaxqso' in data.experiments:
+                    print("If you include QSO dataset in the 'sdssdr16_gal_qso' AND ly-alpha autocorrelation," + 
                     "we highly recommend to take into account the crosscorrelation of the two dataset i.e. " + 
-                    "include also the likelihood baoonly_lyaxqso_sdss_dr16 likelihood.")
+                    "include also the likelihood sdssdr16_lyaxqso likelihood.")
                 
             with open(os.path.join(self.data_directory, self.qso_data_file), 'r') as filein:
                 for i, line in enumerate(filein):

@@ -1,0 +1,28 @@
+# BAO-only DR16 (Alam et al. arXiv: 2007.08991)
+# Includes LRG samples from SDSS DR12 (do not use
+# the bao_boss_dr12 likelihood with this likelihood)
+# and QSO data. The likelihood and the data are
+# concated into one datavector and covariance matrix
+# with the option to choose which ones to include. 
+# By Shahbaz Alvi January 2022
+
+# The directory where the following files are stored
+sdssdr16_gal_qso.data_directory      = data.path['data']
+
+# Options for DR12 LRG datasets (z_eff = 0.38, 0.51)
+sdssdr16_gal_qso.lrg_dr12 = True
+sdssdr16_gal_qso.lrg_dr12_data_file = 'sdss_dr16/sdss_DR12_LRG_BAO_DMDH.txt'
+sdssdr16_gal_qso.lrg_dr12_cov_file  = 'sdss_dr16/sdss_DR12_LRG_BAO_DMDH_covtot.txt'
+
+# Options for DR16 LRG datasets (z_eff = 0.70)
+sdssdr16_gal_qso.lrg_dr16 = True
+sdssdr16_gal_qso.lrg_dr16_data_file  = 'sdss_dr16/sdss_DR16_LRG_BAO_DMDH.txt'
+sdssdr16_gal_qso.lrg_dr16_cov_file  = 'sdss_dr16/sdss_DR16_LRG_BAO_DMDH_covtot.txt'
+
+# Options for DR16 QSO datasets (z_eff = 1.48)
+sdssdr16_gal_qso.qso_dr16 = True
+sdssdr16_gal_qso.qso_data_file = 'sdss_dr16/sdss_DR16_QSO_BAO_DMDH.txt'
+sdssdr16_gal_qso.qso_cov_file = 'sdss_dr16/sdss_DR16_QSO_BAO_DMDH_covtot.txt'
+
+sdssdr16_gal_qso.rs_rescale          = 1.
+sdssdr16_gal_qso.rd_fid_in_Mpc       = 147.78

@@ -7,7 +7,7 @@ import scipy.constants as conts
 from scipy import interpolate as itp
 from scipy.interpolate import RectBivariateSpline
 
-class baoonly_lyauto_sdss_dr16(Likelihood):
+class sdssdr16_lyauto(Likelihood):
 
     # initialization routine
 

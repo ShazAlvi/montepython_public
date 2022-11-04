@@ -7,7 +7,7 @@ import scipy.constants as conts
 from scipy import interpolate as itp
 from scipy.interpolate import RectBivariateSpline
 
-class baoonly_lyaxqso_sdss_dr16(Likelihood):
+class sdssdr16_lyaxqso(Likelihood):
 
     # initialization routine
 
@@ -15,7 +15,7 @@ class baoonly_lyaxqso_sdss_dr16(Likelihood):
 
         Likelihood.__init__(self, path, data, command_line)
 
-        print('Including eBOSS Lya-QSO.')
+        print('Including eBOSS LyaxQSO.')
         self.lyaxqso_data = np.loadtxt(os.path.join(self.data_directory, self.data_file))
         self.lyaxqso_DM = np.unique(self.lyaxqso_data[:, 0]) 
         self.lyaxqso_DH = np.unique(self.lyaxqso_data[:, 1]) 

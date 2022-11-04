@@ -1,6 +1,6 @@
 #------Experiments to test (separated with commas)-----
 
-data.experiments=['baoonly_lyauto_sdss_dr16', 'baoonly_elg_sdss_dr16', 'baoonly_sdss_dr16', 'bao_smallz_2014','baoonly_lyaxqso_sdss_dr16']
+data.experiments=['sdssdr16_lyauto', 'sdssdr16_elg', 'sdssdr16_gal_qso', 'bao_smallz_2014','sdssdr16_lyaxqso']
 
 # Priors from table 9 of arXiv: 2007.08991
 

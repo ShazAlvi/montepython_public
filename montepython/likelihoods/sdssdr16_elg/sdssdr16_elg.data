@@ -1,0 +1,12 @@
+# BAO-only DR16 (Alam et al. arXiv: 2007.08991)
+# for the ELG sample
+# By Shahbaz Alvi January 2022
+
+sdssdr16_elg.data_directory      = data.path['data']
+
+sdssdr16_elg.data_file = 'sdss_dr16/sdss_DR16_ELG_BAO_DVtable.txt'
+sdssdr16_elg.elg_dr16_z_eff = 0.845
+
+sdssdr16_elg.rs_rescale          = 1.
+sdssdr16_elg.rd_fid_in_Mpc       = 147.78
+

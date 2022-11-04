@@ -19,7 +19,7 @@ class baoonly_sdss_dr16(Likelihood):
             'bao_boss_dr12']
         if 'bao_boss_dr12' in data.experiments:
             raise io_mp.LikelihoodError(
-                'BAO measurments from DR12 have already been included in DR16. Hence, bao_boss_dr12 is in coflict.')
+                'BAO measurments from DR12 have already been included in DR16 likelihood. Hence, bao_boss_dr12 is in coflict.')
         
         # define arrays for values of z and data points DM/r_s and DH/r_s.
         self.z = np.array([], 'float64')
@@ -34,6 +34,7 @@ class baoonly_sdss_dr16(Likelihood):
         # Loadind the data depending on the datasets asked in the param file.
         # By defualt all the datasets are loaded.
         if self.lrg_dr12:
+            print("BOSS LRG DR12 = " + str(self.lrg_dr12))
             with open(os.path.join(self.data_directory, self.lrg_dr12_data_file), 'r') as filein:
                 for i, line in enumerate(filein):
                     if line.strip() and line.find('#') == -1:
@@ -51,6 +52,7 @@ class baoonly_sdss_dr16(Likelihood):
 
             lrg_dr12_points = i
         if self.lrg_dr16:
+            print("eBOSS LRG DR16 = " + str(self.lrg_dr16))
             with open(os.path.join(self.data_directory, self.lrg_dr16_data_file), 'r') as filein:
                 for i, line in enumerate(filein):
                     if line.strip() and line.find('#') == -1:
@@ -69,10 +71,12 @@ class baoonly_sdss_dr16(Likelihood):
             # the covariance matrix in the right order.
             lrg_dr16_points = i 
         if self.qso_dr16:
-            if  ('baoonly_lyauto_sdss_dr16') and (not 'baoonly_lyaxqso_sdss_dr16') in data.experiments:
-                print("If you include QSO dataset in the 'baoonly_sdss_dr16' AND ly-alpha autocorrelation," + 
-                  "we highly recommend to take into account the crosscorrelation of the two dataset i.e. " + 
-                  "include also the likelihood baoonly_lyaxqso_sdss_dr16 likelihood.")
+            print("eBOSS QSO = " + str(self.qso_dr16))
+            if  ('baoonly_lyauto_sdss_dr16') in data.experiments:
+                if  not 'baoonly_lyaxqso_sdss_dr16' in data.experiments:
+                    print("If you include QSO dataset in the 'baoonly_sdss_dr16' AND ly-alpha autocorrelation," + 
+                    "we highly recommend to take into account the crosscorrelation of the two dataset i.e. " + 
+                    "include also the likelihood baoonly_lyaxqso_sdss_dr16 likelihood.")
                 
             with open(os.path.join(self.data_directory, self.qso_data_file), 'r') as filein:
                 for i, line in enumerate(filein):
@@ -98,7 +102,7 @@ class baoonly_sdss_dr16(Likelihood):
         # Number of data points
         self.num_points = 2*self.num_bins
 
-        # Read covariance matrix and setting them according to the chosen dataset
+        # Read covariance matrix and set them according to the chosen dataset
         self.cov_data = np.zeros((self.num_points,self.num_points), 'float64')        
         if self.lrg_dr12:
             self.cov_data = np.loadtxt(os.path.join(self.data_directory, self.lrg_dr12_cov_file))  

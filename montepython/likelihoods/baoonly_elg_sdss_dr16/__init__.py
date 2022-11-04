@@ -25,7 +25,7 @@ class baoonly_elg_sdss_dr16(Likelihood):
                 raise io_mp.LikelihoodError(
                     'conflicting BAO measurments')
         # Read the datafile.
-        print('Including BAO measurements from eBOSS ELG.')
+        print('Including eBOSS ELG.')
         self.elg_data = np.loadtxt(os.path.join(self.data_directory, self.data_file))
         self.elg_DV = self.elg_data[:, 0] 
         self.elg_lkl = self.elg_data[:, 1]

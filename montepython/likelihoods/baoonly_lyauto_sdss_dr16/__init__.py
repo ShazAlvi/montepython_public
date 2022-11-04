@@ -15,12 +15,8 @@ class baoonly_lyauto_sdss_dr16(Likelihood):
 
         Likelihood.__init__(self, path, data, command_line)
 
-        if  ('baoonly_sdss_dr16') and (not 'baoonly_lyaxqso_sdss_dr16') in data.experiments:
-            print("If you include QSO dataset in the 'baoonly_sdss_dr16' AND ly-alpha autocorrelation," + 
-                  "we highly recommend to take into account the crosscorrelation of the two dataset i.e. " + 
-                  "include also the likelihood baoonly_lyaxqso_sdss_dr16 likelihood.")
         # Read the datafile.
-        print('Including BAO measurements from eBOSS Lya-auto.')
+        print('Including eBOSS Lya-auto.')
         self.lya_data = np.loadtxt(os.path.join(self.data_directory, self.data_file))
         self.lya_DM = np.unique(self.lya_data[:, 0]) 
         self.lya_DH = np.unique(self.lya_data[:, 1]) 

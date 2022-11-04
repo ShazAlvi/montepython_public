@@ -15,7 +15,7 @@ class baoonly_lyaxqso_sdss_dr16(Likelihood):
 
         Likelihood.__init__(self, path, data, command_line)
 
-        print('Including BAO measurements from eBOSS Lya-QSO.')
+        print('Including eBOSS Lya-QSO.')
         self.lyaxqso_data = np.loadtxt(os.path.join(self.data_directory, self.data_file))
         self.lyaxqso_DM = np.unique(self.lyaxqso_data[:, 0]) 
         self.lyaxqso_DH = np.unique(self.lyaxqso_data[:, 1]) 

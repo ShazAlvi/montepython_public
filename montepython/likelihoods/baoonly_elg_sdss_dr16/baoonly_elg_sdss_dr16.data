@@ -1,4 +1,5 @@
-# BAO-only DR16 for the ELG sample (arXiv: 2007.09009, 2007.09008)
+# BAO-only DR16 (Alam et al. arXiv: 2007.08991)
+# for the ELG sample
 # By Shahbaz Alvi January 2022
 
 baoonly_elg_sdss_dr16.data_directory      = data.path['data']

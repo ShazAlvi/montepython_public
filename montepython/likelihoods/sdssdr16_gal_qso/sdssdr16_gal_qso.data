@@ -1,10 +1,24 @@
-# BAO-only DR16 (Alam et al. arXiv: 2007.08991)
+# References for this BAO likelihood:
+# BOSS Collaboration, Baryon Oscillation Spectroscopic Survey (BOSS) DR12 galaxies (zeff = 0.38, 0.51) (https://arxiv.org/abs/1607.03155)
+# Extended Baryon Oscillation Spectroscopic Survey (eBOSS) DR16 
+#    Luminous Red Galaxies (zeff = 0.7) (https://arxiv.org/abs/2007.08993, H. Gil-Marin et al. https://arxiv.org/abs/2007.08994)
+#    QSO (zeff = 1.48) J. Hou et al. https://arxiv.org/abs/2007.08998, R. Neveux et al. https://arxiv.org/abs/2007.08999
+
+# References for all eBOSS DR16 BAO likelihoods (names of likelihoods):
+# eBOSS LRG: J.E. Bautista et al. https://arxiv.org/abs/2007.08993, H. Gil-Marin et al. https://arxiv.org/abs/2007.08994
+# eBOSS ELG: A. Tamone et al. https://arxiv.org/abs/2007.09009, A. de Mattia et al. https://arxiv.org/abs/2007.09008
+# QSO: J. Hou et al. https://arxiv.org/abs/2007.08998, R. Neveux et al. https://arxiv.org/abs/2007.08999
+# Lya, LyaxQSO: Bourboux et al. https://arxiv.org/abs/2007.08995
+
+
 # Includes LRG samples from SDSS DR12 (do not use
 # the bao_boss_dr12 likelihood with this likelihood)
-# and QSO data. The likelihood and the data are
+# and QSO data.
+
+# The likelihood and the data are
 # concated into one datavector and covariance matrix
 # with the option to choose which ones to include. 
-# By Shahbaz Alvi January 2022
+
 
 # The directory where the following files are stored
 sdssdr16_gal_qso.data_directory      = data.path['data']
